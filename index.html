@@ -1,55 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title> Primera prueba </title>
-        
-        <style>
-            body {
-                margin: 0;
-                padding: 20px;
-                min-height: 100vh;
-                background: linear-gradient(to bottom, #1b4332, #081c15);
-                color: #fff;
-                font-family: Arial, sans-serif;
-            }
-            h1 {
-                font-size: 2.54em;
-                font-weight: 800;
-                -webkit-text-stroke: 1.2px black;
-                color: #fff;
-            }
-            p {
-                font-size: 1.2rem;
-                color: #fff;
-                text-shadow: 
-                -1px -1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-            }
-            .mi imagen{
-                max-width: 400px;
-                width: 100%;
-                border-radius: 12px;
-                border: 3px solid #000;
-                margin-top: 15px;
-            }
-            .btn-ir {
-                display: inline-block;
-                padding: 12px 24px;
-                background-color: #2d6a4f;
-                color: #fff;
-                font-size: 1.1rem;
-                font-weight: bold;
-                border-radius: 8px;
-                border: 2px solid #000;
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-            }
-        </style>
-    </head>
-    <body>
-        <h1> La primera locura  </h1>
-        <p> La pagina es clave broder</p>
-        <img src="https://images-ext-1.discordapp.net/external/jLztJUUGGI8mJKGIOC2ebFRlDoSH7-kxSEA2I0kOgHc/https/www.mypokecard.com/my/galery/x9YJiQCyjjFC.jpg?format=webp&width=323&height=450" alt="SIXSEBEEN" class="mi-imagen">
-        <a href="pagina2.html" class="btn-ir">Ir a la segunda página</a>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo de Trabajo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- CSS propio -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-code-slash"></i> Equipo de Trabajo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/integrantes.html">Integrantes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Investigacion
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/contenidos.html">Todos los temas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/docker.html">Docker</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/comandos-docker.html">Comandos Docker</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/bootstrap.html">Bootstrap</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/etiquetas-semanticas.html">Etiquetas Semanticas</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/etiquetas-html.html">Etiquetas HTML</a></li>
+                                <li><a class="dropdown-item" href="pages/investigacion/nginx.html">Nginx</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/reflexion.html">Reflexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="container">
+                <i class="bi bi-people-fill" style="font-size: 3rem; margin-bottom: 16px; display: block;"></i>
+                <h1>Equipo de Trabajo</h1>
+                <p>Somos un equipo de estudiantes comprometidos con el desarrollo web,
+                   la colaboracion y el aprendizaje continuo.</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="pages/integrantes.html" class="btn btn-light btn-lg fw-semibold">
+                        <i class="bi bi-person-lines-fill"></i> Conoce al equipo
+                    </a>
+                    <a href="pages/contenidos.html" class="btn btn-outline-light btn-lg fw-semibold">
+                        <i class="bi bi-book"></i> Ver investigacion
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DESCRIPCION DEL EQUIPO ============ -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">Quienes somos</h2>
+                <p class="seccion-subtitulo">Conoce nuestra historia, mision y lo que nos motiva como equipo.</p>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <!-- TODO: Reemplazar con foto real del equipo en images/ -->
+                        <div class="equipo-img bg-light d-flex align-items-center justify-content-center text-center"
+                             style="height: 300px; border-radius: 16px;">
+                            <span class="text-muted">
+                                <i class="bi bi-camera" style="font-size: 2rem;"></i><br>
+                                Foto del equipo aqui
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-3">Nuestra historia</h3>
+                        <p>
+                            Nos formamos como equipo al inicio de la asignatura Aplicaciones y
+                            Tecnologias de la Web. Desde el primer dia decidimos trabajar de
+                            forma organizada, asignando roles claros y apoyandonos mutuamente.
+                        </p>
+                        <h3 class="fw-bold mb-3 mt-4">Nuestra mision</h3>
+                        <p>
+                            Desarrollar soluciones web de calidad aplicando las mejores practicas
+                            de desarrollo, colaboracion y tecnologias modernas, mientras aprendemos
+                            y crecemos como profesionales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FORTALEZAS ============ -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">Nuestras fortalezas</h2>
+                <p class="seccion-subtitulo">Las habilidades tecnicas y colaborativas que nos definen.</p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon azul">
+                                    <i class="bi bi-code-square"></i>
+                                </div>
+                                <h5 class="card-title">Desarrollo web</h5>
+                                <p class="card-text text-muted">Creamos sitios web con HTML, CSS y
+                                   frameworks modernos como Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon verde">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <h5 class="card-title">Trabajo en equipo</h5>
+                                <p class="card-text text-muted">Nos organizamos con roles claros y
+                                   comunicacion constante para avanzar juntos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon naranja">
+                                    <i class="bi bi-box-seam"></i>
+                                </div>
+                                <h5 class="card-title">Contenedores</h5>
+                                <p class="card-text text-muted">Usamos Docker y Nginx para empaquetar
+                                   y desplegar nuestras aplicaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-icon morado">
+                                    <i class="bi bi-lightbulb"></i>
+                                </div>
+                                <h5 class="card-title">Aprendizaje continuo</h5>
+                                <p class="card-text text-muted">Investigamos y aprendemos nuevas
+                                   tecnologias para mejorar constantemente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TECNOLOGIAS ============ -->
+        <section class="seccion seccion-blanca">
+            <div class="container text-center">
+                <h2 class="seccion-titulo">Tecnologias utilizadas</h2>
+                <p class="seccion-subtitulo">Las herramientas con las que construimos este sitio.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <span class="tech-badge">
+                        <i class="bi bi-filetype-html text-danger"></i> HTML5
+                    </span>
+                    <span class="tech-badge">
+                        <i class="bi bi-filetype-css text-primary"></i> CSS3
+                    </span>
+                    <span class="tech-badge">
+                        <i class="bi bi-bootstrap" style="color: #7c3aed;"></i> Bootstrap 5
+                    </span>
+                    <span class="tech-badge">
+                        <i class="bi bi-box text-info"></i> Docker
+                    </span>
+                    <span class="tech-badge">
+                        <i class="bi bi-hdd-rack text-success"></i> Nginx
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ENLACES DESTACADOS ============ -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">Explora nuestro sitio</h2>
+                <p class="seccion-subtitulo">Accede rapidamente a las secciones mas importantes.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-person-badge" style="font-size: 2rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Integrantes</h5>
+                                <p class="card-text text-muted">Conoce a cada miembro del equipo y sus habilidades.</p>
+                                <a href="pages/integrantes.html" class="btn btn-primario">Ver integrantes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-journal-text" style="font-size: 2rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Investigacion</h5>
+                                <p class="card-text text-muted">Docker, CSS, Bootstrap, HTML y mas.</p>
+                                <a href="pages/contenidos.html" class="btn btn-primario">Ver temas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-chat-quote" style="font-size: 2rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Reflexion</h5>
+                                <p class="card-text text-muted">Nuestro proceso, aprendizajes y experiencia.</p>
+                                <a href="pages/reflexion.html" class="btn btn-primario">Leer reflexion</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <p class="mb-2"><strong>Equipo de Trabajo</strong></p>
+            <p class="mb-2">Aplicaciones y Tecnologias de la Web &mdash; Laboratorio 01</p>
+            <p class="mb-0">
+                <a href="https://github.com/patrisio777/EQUIPO-DE-TRABAJO" target="_blank">
+                    <i class="bi bi-github"></i> Ver en GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
