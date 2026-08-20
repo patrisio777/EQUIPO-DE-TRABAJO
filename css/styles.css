@@ -1,5 +1,5 @@
 :root {
-  --color-primario: #2563eb;
+  --color-primario: #00e71b;
   --color-secundario: #1e40af;
   --color-acento: #f59e0b;
   --color-fondo: #f8fafc;
@@ -143,6 +143,16 @@ body {
   color: #7c3aed;
 }
 
+.card-icon.rojo {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.card-icon.cian {
+  background-color: #cffafe;
+  color: #0891b2;
+}
+
 /* Tecnologias */
 .tech-badge {
   display: inline-flex;
@@ -215,4 +225,40 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* ============ INTEGRANTES ============ */
+
+/* Tarjeta clicable de cada integrante (pages/integrantes.html) */
+.integrante-card {
+  cursor: pointer;
+}
+
+.integrante-foto {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--color-borde);
+}
+
+/* Badge de rol, reutilizado en la tarjeta y en el perfil individual */
+.badge-rol {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: var(--color-primario);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+/* Foto grande en la página de perfil (pages/integrantes/integranteX.html) */
+.perfil-foto {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
