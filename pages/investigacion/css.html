@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - GADC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">GADC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../integrantes.html">Integrantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Investigación</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="docker.html">Docker</a></li>
+                                <li><a class="dropdown-item" href="comandos-docker.html">Comandos Docker</a></li>
+                                <li><a class="dropdown-item active" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="bootstrap.html">Bootstrap</a></li>
+                                <li><a class="dropdown-item" href="etiquetas-html.html">Etiquetas HTML</a></li>
+                                <li><a class="dropdown-item" href="nginx.html">Nginx</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../reflexion.html">Reflexión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" style="padding: 50px 0;">
+            <div class="container text-center">
+                <i class="bi bi-filetype-css" style="font-size: 3rem; display: block; margin-bottom: 12px;"></i>
+                <h1>Cascading Style Sheets</h1>
+                <p>El lenguaje que define la presentación visual, el diseño y la adaptabilidad de las aplicaciones web.</p>
+            </div>
+        </section>
+
+        <!-- QUE ES CSS E IMPORTANCIA -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">1. ¿Qué es CSS y cuál es su Importancia?</h2>
+                <p class="seccion-subtitulo">La base del diseño y la experiencia visual en la web.</p>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <p><strong>CSS (Cascading Style Sheets)</strong> es un lenguaje declarativo utilizado para describir cómo se representan visualmente los documentos estructurados en HTML.</p>
+                        <p>Permite controlar colores, tipografías, alineaciones, espaciados, bordes, animaciones y la adaptación a diferentes tamaños de pantalla (diseño responsivo).</p>
+                        <p>El concepto de <em>cascada</em> define cómo se resuelven los conflictos cuando varias reglas de estilo apuntan al mismo elemento, considerando la especificidad, la herencia y el orden de declaración.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Importancia en el Desarrollo Web</h5>
+                                <ul>
+                                    <li><strong>Separación de responsabilidades:</strong> Aísla el contenido (HTML) de la presentación visual (CSS).</li>
+                                    <li><strong>Mantenibilidad:</strong> Permite actualizar el diseño completo del sitio modificando una sola hoja de estilos centralizada.</li>
+                                    <li><strong>Consistencia:</strong> Asegura un aspecto visual uniforme en todas las páginas del sistema.</li>
+                                    <li><strong>Experiencia de usuario (UX):</strong> Optimiza la jerarquía visual, la legibilidad y la usabilidad en cualquier dispositivo.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIA CAPAS -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">2. Contenido, Estructura y Presentación</h2>
+                <p class="seccion-subtitulo">Las tres capas fundamentales en la construcción de interfaces web.</p>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Capa</th>
+                                <th>Tecnología</th>
+                                <th>Propósito / Responsabilidad</th>
+                                <th>Ejemplo en el Proyecto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Contenido</strong></td>
+                                <td>Texto, imágenes, datos</td>
+                                <td>Información pura que se entrega al usuario final.</td>
+                                <td>Datos del integrante, misión del equipo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estructura</strong></td>
+                                <td>HTML5 semántico</td>
+                                <td>Organización lógica, jerarquía y significado del contenido.</td>
+                                <td><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Presentación</strong></td>
+                                <td>CSS3 / Bootstrap</td>
+                                <td>Aspecto estético, paleta de colores, fuentes y maquetación responsiva.</td>
+                                <td><code>styles.css</code>, clases <code>card</code>, <code>btn-primary</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle"></i> <strong>Buenas prácticas:</strong> Mantener estas tres capas separadas facilita el trabajo colaborativo en Git y reduce la deuda técnica del código.
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAS DE APLICAR CSS -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">3. Formas de Aplicar CSS</h2>
+                <p class="seccion-subtitulo">Métodos para vincular estilos a un documento HTML.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">a) CSS en Línea (Inline)</h5>
+                                <span class="badge bg-danger mb-2">No recomendado</span>
+                                <p class="card-text text-muted">Se aplica directo en el elemento mediante el atributo <code>style="..."</code>. Mezcla contenido con presentación y dificulta el mantenimiento.</p>
+                                <div class="p-2 rounded" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                    <code>&lt;h1 style="color: blue;"&gt;Título&lt;/h1&gt;</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">b) CSS Interno</h5>
+                                <span class="badge bg-warning text-dark mb-2">Uso puntual</span>
+                                <p class="card-text text-muted">Se declara dentro de la etiqueta <code>&lt;style&gt;</code> en el encabezado <code>&lt;head&gt;</code>. Útil para prototipos rápidos o estilos exclusivos de una página.</p>
+                                <div class="p-2 rounded" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                    <code>&lt;style&gt;<br>&nbsp;p { color: #333; }<br>&lt;/style&gt;</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">c) CSS Externo</h5>
+                                <span class="badge bg-success mb-2">Estándar recomendado</span>
+                                <p class="card-text text-muted">Hojas de estilo independientes vinculadas con <code>&lt;link&gt;</code>. Permite reutilizar reglas en todo el sitio y aprovecha la memoria caché del navegador.</p>
+                                <div class="p-2 rounded" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+                                    <code>&lt;link rel="stylesheet" href="../../css/styles.css"&gt;</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTORES, CLASES E IDENTIFICADORES -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">4. Selectores Básicos, Clases e IDs</h2>
+                <p class="seccion-subtitulo">Mecanismos para apuntar a elementos específicos del DOM.</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Selectores Básicos</h5>
+                                <ul>
+                                    <li><strong>Universal (<code>*</code>):</strong> Aplica a todos los elementos del documento. Muy usado para normalizar cajas (<code>box-sizing: border-box</code>).</li>
+                                    <li><strong>De Etiqueta (<code>h1</code>, <code>p</code>, <code>a</code>):</strong> Aplica a todas las ocurrencias de ese tipo de etiqueta.</li>
+                                    <li><strong>Combinados / Descendientes (<code>div p</code>, <code>.card > .card-body</code>):</strong> Aplican cuando un elemento está anidado dentro de otro.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Clases (<code>.</code>) vs Identificadores (<code>#</code>)</h5>
+                                <ul>
+                                    <li><strong>Clase (<code>.nombre-clase</code>):</strong> Diseñada para reutilizarse en múltiples elementos HTML. Es el pilar del diseño modular y de Bootstrap.</li>
+                                    <li><strong>Identificador (<code>#nombre-id</code>):</strong> Debe ser estrictamente único por página. Posee una especificidad alta y se emplea para destinos de anclaje (enlaces internos) o interacción JavaScript.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODELO DE CAJA (BOX MODEL) -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">5. Modelo de Caja (Box Model)</h2>
+                <p class="seccion-subtitulo">Estructura rectangular que envuelve cada elemento HTML.</p>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Esquema visual del Box Model usando grillas/bordes de Bootstrap -->
+                        <div class="p-3 text-center rounded" style="background-color: #fee2e2; border: 2px dashed #dc2626;">
+                            <span class="badge bg-danger mb-2">Margin (Margen externo)</span>
+                            <div class="p-3 rounded" style="background-color: #fef3c7; border: 4px solid #d97706;">
+                                <span class="badge bg-warning text-dark mb-2">Border (Borde)</span>
+                                <div class="p-3 rounded" style="background-color: #dcfce7; border: 2px solid #16a34a;">
+                                    <span class="badge bg-success mb-2">Padding (Relleno interno)</span>
+                                    <div class="p-3 rounded bg-white" style="border: 2px solid #2563eb;">
+                                        <span class="badge bg-primary">Content (Contenido real)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Capas del Modelo</h5>
+                                <ul>
+                                    <li><strong>Content:</strong> El área central donde se renderiza el texto, imagen o elemento.</li>
+                                    <li><strong>Padding:</strong> Espacio interior transparente entre el contenido y el borde.</li>
+                                    <li><strong>Border:</strong> Línea que delimita el padding y el contenido; configurable en grosor, estilo y color.</li>
+                                    <li><strong>Margin:</strong> Espacio exterior transparente que separa el elemento de sus vecinos en la página.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTILOS APLICADOS EN EL SITIO -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">6. Estilos Propios Aplicados en el Proyecto</h2>
+                <p class="seccion-subtitulo">Integración de nuestro archivo styles.css con Bootstrap 5.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-palette text-primary"></i> Paleta e Identidad</h5>
+                                <p class="card-text text-muted">Definición de variables CSS (<code>:root</code>) en <code>styles.css</code> para colores corporativos y tipografías globales del equipo GADC.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-magic text-primary"></i> Efectos Hover</h5>
+                                <p class="card-text text-muted">Personalización sobre los componentes <code>.card</code> de Bootstrap para agregar elevaciones visuales y sombras suaves al pasar el cursor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-aspect-ratio text-primary"></i> Secciones y Spacing</h5>
+                                <p class="card-text text-muted">Clases utilitarias propias (<code>.seccion-blanca</code>, <code>.seccion-gris</code>, <code>.hero</code>) combinadas con el sistema de grillas de Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p class="mb-2"><strong>GADC</strong></p>
+            <p class="mb-2">Aplicaciones y Desarrollo Web &mdash; Laboratorio 01</p>
+            <p class="mb-0">
+                <a href="https://github.com/patrisio777/EQUIPO-DE-TRABAJO" target="_blank">
+                    <i class="bi bi-github"></i> Ver en GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
