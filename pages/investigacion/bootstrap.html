@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - GADC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">GADC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../integrantes.html">Integrantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Investigación</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="docker.html">Docker</a></li>
+                                <li><a class="dropdown-item" href="comandos-docker.html">Comandos Docker</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item active" href="bootstrap.html">Bootstrap</a></li>
+                                <li><a class="dropdown-item" href="etiquetas-html.html">Etiquetas HTML</a></li>
+                                <li><a class="dropdown-item" href="nginx.html">Nginx</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../reflexion.html">Reflexión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" style="padding: 50px 0;">
+            <div class="container text-center">
+                <i class="bi bi-bootstrap" style="font-size: 3rem; display: block; margin-bottom: 12px;"></i>
+                <h1>Bootstrap</h1>
+                <p>Framework CSS que facilita la creación de sitios web responsivos y modernos.</p>
+            </div>
+        </section>
+
+        <!-- QUE ES BOOTSTRAP -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">¿Qué es Bootstrap?</h2>
+                <p class="seccion-subtitulo">Un framework CSS de código abierto creado por Twitter.</p>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <p>Bootstrap es un <strong>framework de CSS y JavaScript</strong> que proporciona componentes prediseñados, un sistema de grillas responsivo y utilidades para crear sitios web de forma rápida y consistente.</p>
+                        <p>En lugar de escribir todo el CSS desde cero, Bootstrap ofrece clases listas para usar que aplican estilos profesionales con solo agregarlas al HTML.</p>
+                        <p>Fue creado por ingenieros de Twitter en 2011 y actualmente es uno de los frameworks más utilizados en el mundo.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Ventajas de usar Bootstrap</h5>
+                                <ul>
+                                    <li><strong>Rapidez:</strong> no necesitas escribir CSS desde cero</li>
+                                    <li><strong>Responsivo:</strong> se adapta automáticamente a cualquier pantalla</li>
+                                    <li><strong>Consistencia:</strong> todos los componentes tienen un diseño coherente</li>
+                                    <li><strong>Documentación:</strong> tiene una documentación muy completa en getbootstrap.com</li>
+                                    <li><strong>Comunidad:</strong> millones de desarrolladores lo usan y comparten soluciones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISEÑO RESPONSIVO -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">Diseño Responsivo</h2>
+                <p class="seccion-subtitulo">Un solo sitio que se adapta a cualquier dispositivo.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-phone" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Móvil</h5>
+                                <p class="card-text text-muted">Menor a 768px. Las columnas se apilan verticalmente.</p>
+                                <span class="badge bg-light text-dark border">col-12 (por defecto)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-tablet" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Tablet</h5>
+                                <p class="card-text text-muted">Desde 768px. Se activan las clases col-md-*.</p>
+                                <span class="badge bg-light text-dark border">col-md-6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <i class="bi bi-laptop" style="font-size: 2.5rem; color: var(--color-primario);"></i>
+                                <h5 class="card-title mt-3">Escritorio</h5>
+                                <p class="card-text text-muted">Desde 992px. Se activan las clases col-lg-*.</p>
+                                <span class="badge bg-light text-dark border">col-lg-4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info mt-4">
+                    <i class="bi bi-info-circle"></i> <strong>Dato:</strong> El diseño responsivo significa que el sitio se adapta automáticamente al tamaño de la pantalla sin necesidad de crear versiones separadas para móvil y escritorio.
+                </div>
+            </div>
+        </section>
+
+        <!-- SISTEMA DE GRILLAS -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">Sistema de Grillas</h2>
+                <p class="seccion-subtitulo">La base de Bootstrap: container, row y col.</p>
+
+                <h4 class="fw-bold mt-4 mb-3">¿Cómo funciona?</h4>
+                <p>Bootstrap divide la pantalla en <strong>12 columnas</strong>. Tú decides cuántas columnas ocupa cada elemento:</p>
+
+                <!-- Ejemplo visual de grilla -->
+                <div class="row g-2 mb-4 text-center">
+                    <div class="col-12">
+                        <div class="p-2 rounded" style="background-color: #dbeafe; border: 1px solid #93c5fd;">
+                            <code>col-12</code> → 100% del ancho
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2 mb-4 text-center">
+                    <div class="col-6">
+                        <div class="p-2 rounded" style="background-color: #dcfce7; border: 1px solid #86efac;">
+                            <code>col-6</code> → 50%
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-2 rounded" style="background-color: #dcfce7; border: 1px solid #86efac;">
+                            <code>col-6</code> → 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2 mb-4 text-center">
+                    <div class="col-4">
+                        <div class="p-2 rounded" style="background-color: #fef3c7; border: 1px solid #fcd34d;">
+                            <code>col-4</code> → 33%
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="p-2 rounded" style="background-color: #fef3c7; border: 1px solid #fcd34d;">
+                            <code>col-4</code> → 33%
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="p-2 rounded" style="background-color: #fef3c7; border: 1px solid #fcd34d;">
+                            <code>col-4</code> → 33%
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2 mb-4 text-center">
+                    <div class="col-3">
+                        <div class="p-2 rounded" style="background-color: #ede9fe; border: 1px solid #c4b5fd;">
+                            <code>col-3</code> → 25%
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="p-2 rounded" style="background-color: #ede9fe; border: 1px solid #c4b5fd;">
+                            <code>col-3</code> → 25%
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="p-2 rounded" style="background-color: #ede9fe; border: 1px solid #c4b5fd;">
+                            <code>col-3</code> → 25%
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="p-2 rounded" style="background-color: #ede9fe; border: 1px solid #c4b5fd;">
+                            <code>col-3</code> → 25%
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="fw-bold mt-4 mb-3">Estructura básica</h4>
+                <p>Siempre necesitas estas tres capas:</p>
+                <div class="card">
+                    <div class="card-body" style="background-color: #f8fafc;">
+                        <pre class="mb-0"><code>&lt;div class="<strong>container</strong>"&gt;       ← centra el contenido
+  &lt;div class="<strong>row</strong>"&gt;             ← crea una fila
+    &lt;div class="<strong>col-md-6</strong>"&gt;     ← columna (mitad en tablet+)
+      Contenido aquí
+    &lt;/div&gt;
+    &lt;div class="<strong>col-md-6</strong>"&gt;     ← otra columna
+      Más contenido
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPONENTES -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">Componentes Reutilizables</h2>
+                <p class="seccion-subtitulo">Elementos prediseñados que usas con solo agregar clases CSS.</p>
+
+                <div class="row g-4">
+                    <!-- Navbar -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-list text-primary"></i> Navbar</h5>
+                                <p class="card-text text-muted">Barra de navegación responsiva que se colapsa en móvil con un botón hamburguesa.</p>
+                                <p><strong>Clases:</strong> <code>navbar</code>, <code>navbar-expand-lg</code>, <code>navbar-toggler</code></p>
+                                <p><strong>Usado en:</strong> Todas las páginas del sitio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cards -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-card-heading text-primary"></i> Cards (Tarjetas)</h5>
+                                <p class="card-text text-muted">Contenedores con borde, título y cuerpo para presentar información agrupada.</p>
+                                <p><strong>Clases:</strong> <code>card</code>, <code>card-body</code>, <code>card-title</code></p>
+                                <p><strong>Usado en:</strong> Integrantes, fortalezas, enlaces destacados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Botones -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-hand-index text-primary"></i> Botones</h5>
+                                <p class="card-text text-muted">Botones con estilos predefinidos para acciones principales y secundarias.</p>
+                                <p><strong>Clases:</strong> <code>btn</code>, <code>btn-primary</code>, <code>btn-outline-light</code>, <code>btn-lg</code></p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <button class="btn btn-primary btn-sm">Primary</button>
+                                    <button class="btn btn-secondary btn-sm">Secondary</button>
+                                    <button class="btn btn-success btn-sm">Success</button>
+                                    <button class="btn btn-danger btn-sm">Danger</button>
+                                    <button class="btn btn-outline-primary btn-sm">Outline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dropdown -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-chevron-down text-primary"></i> Dropdown</h5>
+                                <p class="card-text text-muted">Menú desplegable que muestra opciones al hacer clic.</p>
+                                <p><strong>Clases:</strong> <code>dropdown</code>, <code>dropdown-toggle</code>, <code>dropdown-menu</code>, <code>dropdown-item</code></p>
+                                <p><strong>Usado en:</strong> Menú "Investigación" de la navbar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Badges -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-tag text-primary"></i> Badges</h5>
+                                <p class="card-text text-muted">Etiquetas pequeñas para resaltar información como roles o estados.</p>
+                                <p><strong>Clases:</strong> <code>badge</code>, <code>bg-primary</code>, <code>bg-success</code>, <code>bg-warning</code></p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary">Primary</span>
+                                    <span class="badge bg-success">Success</span>
+                                    <span class="badge bg-warning text-dark">Warning</span>
+                                    <span class="badge bg-danger">Danger</span>
+                                    <span class="badge bg-info">Info</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alertas -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold"><i class="bi bi-exclamation-triangle text-primary"></i> Alertas</h5>
+                                <p class="card-text text-muted">Mensajes destacados para informar, advertir o confirmar acciones.</p>
+                                <p><strong>Clases:</strong> <code>alert</code>, <code>alert-info</code>, <code>alert-success</code>, <code>alert-warning</code></p>
+                                <div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle"></i> Operación exitosa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOTSTRAP VS CSS -->
+        <section class="seccion seccion-blanca">
+            <div class="container">
+                <h2 class="seccion-titulo">Bootstrap vs CSS Personalizado</h2>
+                <p class="seccion-subtitulo">¿Cuándo usar cada uno?</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold" style="color: #7c3aed;"><i class="bi bi-bootstrap"></i> Bootstrap</h5>
+                                <ul>
+                                    <li>Componentes listos para usar (navbar, cards, botones)</li>
+                                    <li>Sistema de grillas responsivo</li>
+                                    <li>Utilidades rápidas (márgenes, padding, flexbox)</li>
+                                    <li>Ideal para estructura y layout general</li>
+                                    <li>Mismo diseño base en todos los navegadores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold" style="color: #2563eb;"><i class="bi bi-filetype-css"></i> CSS Personalizado</h5>
+                                <ul>
+                                    <li>Colores y tipografías propias del equipo</li>
+                                    <li>Estilos únicos que Bootstrap no ofrece</li>
+                                    <li>Personalizar componentes de Bootstrap</li>
+                                    <li>Identidad visual propia del sitio</li>
+                                    <li>Control total sobre cada detalle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info mt-4">
+                    <i class="bi bi-lightbulb"></i> <strong>En nuestro sitio:</strong> Usamos Bootstrap para la estructura (grillas, navbar, cards) y nuestro archivo <code>css/styles.css</code> para los colores, tipografías y estilos propios de GADC.
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPONENTES USADOS POR EL EQUIPO -->
+        <section class="seccion seccion-gris">
+            <div class="container">
+                <h2 class="seccion-titulo">Componentes Bootstrap usados por GADC</h2>
+                <p class="seccion-subtitulo">Los componentes que incorporamos en nuestro sitio.</p>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Componente</th>
+                                <th>Dónde se usa</th>
+                                <th>Clases principales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Navbar responsiva</strong></td>
+                                <td>Todas las páginas</td>
+                                <td><code>navbar navbar-expand-lg sticky-top</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sistema de grillas</strong></td>
+                                <td>Index, integrantes, investigación</td>
+                                <td><code>container row col-md-6 col-lg-3</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tarjetas (Cards)</strong></td>
+                                <td>Fortalezas, integrantes, enlaces</td>
+                                <td><code>card card-body card-title</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Botones</strong></td>
+                                <td>Hero, enlaces destacados, perfiles</td>
+                                <td><code>btn btn-primary btn-lg</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dropdown</strong></td>
+                                <td>Menú de Investigación en la navbar</td>
+                                <td><code>dropdown dropdown-menu dropdown-item</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Badges</strong></td>
+                                <td>Roles de integrantes, tecnologías</td>
+                                <td><code>badge bg-primary bg-success</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alertas</strong></td>
+                                <td>Páginas de investigación</td>
+                                <td><code>alert alert-info alert-success</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tablas</strong></td>
+                                <td>Comandos Docker, componentes</td>
+                                <td><code>table table-striped table-hover</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p class="mb-2"><strong>GADC</strong></p>
+            <p class="mb-2">Aplicaciones y Desarrollo Web &mdash; Laboratorio 01</p>
+            <p class="mb-0">
+                <a href="https://github.com/patrisio777/EQUIPO-DE-TRABAJO" target="_blank">
+                    <i class="bi bi-github"></i> Ver en GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
