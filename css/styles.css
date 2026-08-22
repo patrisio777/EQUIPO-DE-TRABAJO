@@ -58,20 +58,20 @@ img {
 .navbar-custom .nav-link.active {
   color: #c85a32;
 }
-
 .hero-header {
-  background-image: url('https://oti.unp.edu.pe/wp-content/uploads/2024/09/captura113-1.jpg');
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), 
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1guA1rzwW-7mrGs6qZwnV1uKEgpqgU6sl7sL8E6vC_BZmJ1ciKlvW8MZ4&s=10');
   background-size: cover;
   background-position: center;
-  border-bottom: 3px solid #c85a32;
 }
 
 .hero-texto-box {
-  background-color: rgba(45, 26, 41, 0.85);
+  background-color: #2d2627;
   padding: 30px;
-  border-radius: 12px;
-  border: 2px solid #e7d0c5;
-  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 2px solid #5c4340;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-titulo {
@@ -113,14 +113,16 @@ img {
 }
 
 .seccion-contenedor {
+  background-color: #fff8f5;
   border: 2px solid #e7d0c5;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(184, 80, 52, 0.05);
+  box-shadow: 0 4px 15px rgba(184, 80, 52, 0.08);
 }
 
 .border-box {
   border: 2px solid #e7d0c5;
   border-radius: 8px;
+  background-color: #ffffff;
 }
 
 .foto-equipo {
@@ -128,7 +130,7 @@ img {
 }
 
 .card-mision {
-  background-color: #fff8f5;
+  background-color: #fbeee8;
   border-left-color: #c85a32 !important;
   border: 1px solid #e7d0c5;
 }
@@ -138,6 +140,9 @@ img {
   color: #2d1a29;
   border: 1px solid #e7d0c5;
   font-weight: 600;
+  white-space: normal !important;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .btn-sunset-primary {
@@ -184,7 +189,7 @@ img {
   border: 2px solid #c85a32;
 }
 
-.badge-rol-atardecer {
+.badge-color-atardecer {
   background-color: #f7a072;
   color: #2d1a29;
   font-size: 0.85rem;
