@@ -1,264 +1,226 @@
-:root {
-  --color-primario: #00e71b;
-  --color-secundario: #1e40af;
-  --color-acento: #f59e0b;
-  --color-fondo: #f8fafc;
-  --color-texto: #1e293b;
-  --color-texto-claro: #64748b;
-  --color-superficie: #ffffff;
-  --color-borde: #e2e8f0;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--color-superficie) !important;
-  border-bottom: 1px solid var(--color-borde);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.navbar-brand {
-  font-weight: 700;
-  color: var(--color-primario) !important;
-  font-size: 1.3rem;
-}
-
-.nav-link {
-  font-weight: 500;
-  color: var(--color-texto) !important;
-  transition: color 0.2s;
-}
-
-.nav-link:hover {
-  color: var(--color-primario) !important;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-  color: #ffffff;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1.15rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto 24px;
-}
-
-/* Secciones */
-.seccion {
-  padding: 60px 0;
-}
-
-.seccion-gris {
-  background-color: var(--color-fondo);
-}
-
-.seccion-blanca {
-  background-color: var(--color-superficie);
-}
-
-.seccion-titulo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 12px;
-  color: var(--color-texto);
-}
-
-.seccion-subtitulo {
-  text-align: center;
-  color: var(--color-texto-claro);
-  margin-bottom: 40px;
-  max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Tarjetas */
-.card {
-  border: 1px solid var(--color-borde);
-  border-radius: 12px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  height: 100%;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.card-body {
-  padding: 24px;
-}
-
-.card-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Icono de tarjeta */
-.card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2d2623;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  margin-bottom: 16px;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.card-icon.azul {
-  background-color: #dbeafe;
-  color: var(--color-primario);
+main {
+  flex: 1 0 auto;
 }
 
-.card-icon.verde {
-  background-color: #dcfce7;
-  color: #16a34a;
-}
-
-.card-icon.naranja {
-  background-color: #fef3c7;
-  color: #d97706;
-}
-
-.card-icon.morado {
-  background-color: #ede9fe;
-  color: #7c3aed;
-}
-
-.card-icon.rojo {
-  background-color: #fee2e2;
-  color: #dc2626;
-}
-
-.card-icon.cian {
-  background-color: #cffafe;
-  color: #0891b2;
-}
-
-/* Tecnologias */
-.tech-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--color-superficie);
-  border: 1px solid var(--color-borde);
-  border-radius: 50px;
-  padding: 10px 20px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: transform 0.2s;
-}
-
-.tech-badge:hover {
-  transform: scale(1.05);
-}
-
-/* Botones personalizados */
-.btn-primario {
-  background-color: var(--color-primario);
-  color: #ffffff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.2s;
-}
-
-.btn-primario:hover {
-  background-color: var(--color-secundario);
-  color: #ffffff;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-primario);
-  border: 2px solid var(--color-primario);
-  padding: 10px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.2s;
-}
-
-.btn-outline:hover {
-  background-color: var(--color-primario);
-  color: #ffffff;
-}
-
-/* Imagen del equipo */
-.equipo-img {
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+img {
   max-width: 100%;
   height: auto;
 }
 
-/* Footer */
-footer {
-  background-color: var(--color-texto);
-  color: #cbd5e1;
-  padding: 40px 0;
-  text-align: center;
+.bg-pattern {
+  background-color: #fdf8f5;
+  background-image: 
+    linear-gradient(to bottom, rgba(253, 248, 245, 0.88), rgba(245, 230, 222, 0.95)),
+    radial-gradient(#e2c1b2 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
 }
 
-footer a {
-  color: var(--color-acento);
-  text-decoration: none;
+.brand-color {
+  color: #2d1a29 !important;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.text-sunset-dark {
+  color: #2d1a29;
 }
 
-/* ============ INTEGRANTES ============ */
-
-/* Tarjeta clicable de cada integrante (pages/integrantes.html) */
-.integrante-card {
-  cursor: pointer;
+.text-sunset-slate {
+  color: #5c4340;
 }
 
-.integrante-foto {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--color-borde);
+.border-sunset-light {
+  border-color: #e7d0c5 !important;
 }
 
-/* Badge de rol, reutilizado en la tarjeta y en el perfil individual */
-.badge-rol {
-  display: inline-block;
-  background-color: #dbeafe;
-  color: var(--color-primario);
+.navbar-custom {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #e7d0c5;
+}
+
+.navbar-custom .nav-link {
+  color: #5c4340;
   font-weight: 600;
-  font-size: 0.85rem;
-  padding: 6px 16px;
-  border-radius: 50px;
 }
 
-/* Foto grande en la página de perfil (pages/integrantes/integranteX.html) */
-.perfil-foto {
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #c85a32;
+}
+
+.hero-header {
+  background-image: url('https://oti.unp.edu.pe/wp-content/uploads/2024/09/captura113-1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #c85a32;
+}
+
+.hero-texto-box {
+  background-color: rgba(45, 26, 41, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #e7d0c5;
+  backdrop-filter: blur(4px);
+}
+
+.hero-titulo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.hero-subtitulo {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fcebe4 !important;
+}
+
+.btn-hero-agrandado {
+  background-color: #f7a072;
+  color: #2d1a29;
+  font-size: 1.25rem;
+  padding: 16px 32px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-hero-agrandado:hover {
+  background-color: #ffffff;
+  color: #c85a32;
+  border-color: #ffffff;
+}
+
+.btn-hero-agrandado i {
+  font-size: 1.8rem;
+  margin-right: 12px;
+}
+
+.seccion-contenedor {
+  border: 2px solid #e7d0c5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(184, 80, 52, 0.05);
+}
+
+.border-box {
+  border: 2px solid #e7d0c5;
+  border-radius: 8px;
+}
+
+.foto-equipo {
+  border: 1px solid #e7d0c5;
+}
+
+.card-mision {
+  background-color: #fff8f5;
+  border-left-color: #c85a32 !important;
+  border: 1px solid #e7d0c5;
+}
+
+.tech-tag {
+  background-color: #fbeee8;
+  color: #2d1a29;
+  border: 1px solid #e7d0c5;
+  font-weight: 600;
+}
+
+.btn-sunset-primary {
+  background-color: #c85a32;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-sunset-primary:hover {
+  background-color: #a44320;
+  color: #ffffff;
+}
+
+.btn-sunset-secondary {
+  background-color: #5c4340;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-sunset-secondary:hover {
+  background-color: #422f2d;
+  color: #ffffff;
+}
+
+.btn-outline-sunset {
+  background-color: transparent;
+  color: #c85a32;
+  border: 2px solid #c85a32;
+  font-weight: bold;
+}
+
+.btn-outline-sunset:hover {
+  background-color: #c85a32;
+  color: #ffffff;
+}
+
+.contenedor-integrantes-oscuro {
+  background-color: #2d2627;
+  border: 2px solid #5c4340;
+}
+
+.tarjeta-perfil-contenedor {
+  background-color: #2d1a29;
+  border: 2px solid #c85a32;
+}
+
+.badge-rol-atardecer {
+  background-color: #f7a072;
+  color: #2d1a29;
+  font-size: 0.85rem;
+}
+
+.caja-foto-perfil {
+  background-color: #fff3ed;
+  border: 2px solid #f7a072;
+}
+
+.caja-foto-perfil img {
+  border-color: #c85a32 !important;
+  max-height: 340px;
   width: 100%;
-  max-width: 280px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bloque-info-item {
+  background-color: #fff3ed;
+  border-left: 4px solid #c85a32 !important;
+}
+
+.bloque-info-item .titulo-item {
+  color: #2d1a29;
+}
+
+.bloque-info-item .texto-item {
+  color: #5c4340;
+}
+
+footer.footer-custom {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: #2d1a29;
+  border-top: 3px solid #c85a32;
+}
+
+.text-light-sunset {
+  color: #d1b8c2;
 }
