@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker | GADC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-pattern">
+
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4 brand-color" href="../../index.html">GADC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../integrantes.html">Integrantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Investigación</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item active" href="docker.html">Docker</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="bootstrap.html">Bootstrap</a></li>
+                                <li><a class="dropdown-item" href="html-semantico.html">HTML Semántico</a></li>
+                                <li><a class="dropdown-item" href="etiquetas-comunes.html">Etiquetas de Uso Común</a></li>
+                                <li><a class="dropdown-item" href="nginx.html">Nginx</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../reflexion.html">Reflexión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+
+       
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5 text-center">
+            <i class="bi bi-box-seam text-sunset-dark" style="font-size: 3rem; display: block; margin-bottom: 12px;"></i>
+            <h1 class="fw-bold text-sunset-dark display-5 mb-2">Docker Desktop y Comandos</h1>
+            <p class="lead text-sunset-slate mb-0 mx-auto" style="max-width: 750px;">Contenedores, flujo de publicación con Nginx y referencia de comandos CLI.</p>
+        </section>
+
+        
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">¿Qué es Docker Desktop?</h2>
+            <p class="text-center text-sunset-slate mb-4">Entorno local para la creación y ejecución de contenedores.</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <p class="text-sunset-slate mb-0">Docker Desktop es una herramienta gráfica integral que permite construir, ejecutar y gestionar contenedores Docker localmente. Integra el motor Docker Engine, la interfaz de línea de comandos (CLI) y un entorno optimizado para Windows mediante WSL 2 (Windows Subsystem for Linux), eliminando las discrepancias entre entornos de desarrollo y producción.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card-mision p-4 rounded-3 border-start border-4">
+                        <h5 class="fw-bold text-sunset-dark mb-2"><i class="bi bi-cpu text-sunset-slate me-2"></i>WSL 2 Backend</h5>
+                        <p class="text-muted small mb-0">Permite ejecutar el demonio de Linux de forma nativa en Windows con alto rendimiento y bajo consumo de recursos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Proceso de Instalación y Primeros Pasos</h2>
+            <p class="text-center text-sunset-slate mb-4">Etapas clave para la puesta en marcha del entorno.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-download text-sunset-slate fs-3 me-2"></i>
+                                <h5 class="fw-bold text-sunset-dark mb-0">Descarga</h5>
+                            </div>
+                            <p class="text-muted small mb-0">Obtención del instalador oficial desde el portal de Docker.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-sliders text-sunset-slate fs-3 me-2"></i>
+                                <h5 class="fw-bold text-sunset-dark mb-0">Configuración WSL 2</h5>
+                            </div>
+                            <p class="text-muted small mb-0">Marcado de la casilla para utilizar el backend de WSL 2 en Windows para mayor rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-check2-circle text-sunset-slate fs-3 me-2"></i>
+                                <h5 class="fw-bold text-sunset-dark mb-0">Verificación Inicial</h5>
+                            </div>
+                            <p class="text-muted small mb-0">Ejecución en terminal del comando de prueba <code>docker run hello-world</code>, confirmando la descarga de la imagen y el estado activo del demonio de Docker.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Publicación con Nginx y Dockerfile</h2>
+            <p class="text-center text-sunset-slate mb-4">Empaquetado y distribución de la aplicación estática.</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-sunset-slate mb-0">Para servir nuestro sitio web estático utilizamos Nginx, un servidor web de alto rendimiento y bajo consumo de memoria. Empaquetamos el código mediante el siguiente Dockerfile:</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="border-box p-4 bg-white">
+                        <span class="badge tech-tag fw-semibold text-uppercase px-2 py-1 mb-2">Dockerfile</span>
+                        <div class="p-3 rounded bg-light border border-sunset-light">
+                            <code>
+                                FROM nginx:alpine<br>
+                                COPY . /usr/share/nginx/html<br>
+                                EXPOSE 80
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Comandos Principales de Docker</h2>
+            <p class="text-center text-sunset-slate mb-4">Referencia técnica de comandos CLI aplicados en el laboratorio.</p>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Comando</th>
+                            <th>Sintaxis General</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo Práctico</th>
+                            <th>Caso de Uso / Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>docker --version</code></td>
+                            <td><code>docker --version</code></td>
+                            <td>Muestra la versión del motor de Docker instalada.</td>
+                            <td><code>docker --version</code></td>
+                            <td>Verifica que el CLI esté en el PATH del sistema.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker run hello-world</code></td>
+                            <td><code>docker run [opciones] imagen</code></td>
+                            <td>Descarga y corre una imagen de verificación.</td>
+                            <td><code>docker run hello-world</code></td>
+                            <td>Comprueba la comunicación con Docker Hub y el daemon.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker images</code></td>
+                            <td><code>docker images</code></td>
+                            <td>Lista todas las imágenes almacenadas localmente.</td>
+                            <td><code>docker images</code></td>
+                            <td>Revisa el tamaño y los IDs de las imágenes creadas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker ps</code></td>
+                            <td><code>docker ps</code></td>
+                            <td>Lista exclusivamente los contenedores en ejecución.</td>
+                            <td><code>docker ps</code></td>
+                            <td>Comprueba si el servidor web sigue arriba.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker ps -a</code></td>
+                            <td><code>docker ps -a</code></td>
+                            <td>Muestra todos los contenedores (activos y detenidos).</td>
+                            <td><code>docker ps -a</code></td>
+                            <td>Identifica contenedores caídos o que finalizaron.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker build</code></td>
+                            <td><code>docker build -t nombre:tag ruta</code></td>
+                            <td>Construye una imagen a partir de un Dockerfile.</td>
+                            <td><code>docker build -t mi-web .</code></td>
+                            <td>Crea la imagen personalizada para el sitio web.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker run</code></td>
+                            <td><code>docker run [flags] imagen</code></td>
+                            <td>Instancia y arranca un contenedor nuevo.</td>
+                            <td><code>docker run -d -p 8080:80 mi-web</code></td>
+                            <td>Despliega la aplicación en segundo plano.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker stop</code></td>
+                            <td><code>docker stop [ID/Nombre]</code></td>
+                            <td>Envía señal SIGTERM para detener el contenedor de forma segura.</td>
+                            <td><code>docker stop contenedor-web</code></td>
+                            <td>Detiene el servidor temporalmente.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker start</code></td>
+                            <td><code>docker start [ID/Nombre]</code></td>
+                            <td>Reactiva un contenedor que estaba detenido.</td>
+                            <td><code>docker start contenedor-web</code></td>
+                            <td>Vuelve a levantar la web sin recrear el contenedor.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker rm</code></td>
+                            <td><code>docker rm [ID/Nombre]</code></td>
+                            <td>Elimina uno o más contenedores detenidos.</td>
+                            <td><code>docker rm contenedor-web</code></td>
+                            <td>Libera nombres de contenedores y espacio en disco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker rmi</code></td>
+                            <td><code>docker rmi [ID/NombreImagen]</code></td>
+                            <td>Elimina imágenes locales del sistema.</td>
+                            <td><code>docker rmi nginx:alpine</code></td>
+                            <td>Limpia imágenes antiguas o en desuso.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker logs</code></td>
+                            <td><code>docker logs [ID/Nombre]</code></td>
+                            <td>Muestra la salida estándar y errores del contenedor.</td>
+                            <td><code>docker logs contenedor-web</code></td>
+                            <td>Depura errores de arranque o peticiones HTTP recibidas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker exec</code></td>
+                            <td><code>docker exec -it [ID] comando</code></td>
+                            <td>Ejecuta un comando interactivo dentro del contenedor.</td>
+                            <td><code>docker exec -it contenedor-web sh</code></td>
+                            <td>Abre una terminal interna en el contenedor para inspección.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer-custom text-light py-4 mt-5 text-center">
+        <div class="container">
+            <p class="mb-1 fw-bold">Grupo GADC | Aplicaciones y Desarrollo Web</p>
+            <p class="mb-2 text-light-sunset small">Laboratorio 01</p>
+            <a href="https://github.com/patrisio777/EQUIPO-DE-TRABAJO" target="_blank" class="text-light text-decoration-underline">
+                <i class="bi bi-github me-1"></i> Ver en GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
