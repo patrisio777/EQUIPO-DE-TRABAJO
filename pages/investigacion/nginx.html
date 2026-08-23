@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nginx | GADC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-pattern">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4 brand-color" href="../../index.html">GADC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../integrantes.html">Integrantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Investigación</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="docker.html">Docker</a></li>
+                                <li><a class="dropdown-item" href="css.html">CSS</a></li>
+                                <li><a class="dropdown-item" href="bootstrap.html">Bootstrap</a></li>
+                                <li><a class="dropdown-item" href="html-semantico.html">HTML Semántico</a></li>
+                                <li><a class="dropdown-item" href="etiquetas-html.html">Etiquetas HTML</a></li>
+                                <li><a class="dropdown-item active" href="nginx.html">Nginx</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../reflexion.html">Reflexión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+
+        <!-- Hero -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5 text-center">
+            <i class="bi bi-hdd-rack text-sunset-dark" style="font-size: 3rem; display: block; margin-bottom: 12px;"></i>
+            <h1 class="fw-bold text-sunset-dark display-5 mb-2">Nginx</h1>
+            <p class="lead text-sunset-slate mb-0 mx-auto" style="max-width: 750px;">Servidor web de alto rendimiento, proxy inverso y balanceador de carga utilizado en millones de sitios a nivel mundial.</p>
+        </section>
+
+        <!-- ¿Qué es Nginx? -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">¿Qué es Nginx?</h2>
+            <p class="text-center text-sunset-slate mb-4">Origen, arquitectura y por qué es tan popular.</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-sunset-slate"><strong>Nginx</strong> (pronunciado "engine-x") es un servidor web de código abierto creado por Igor Sysoev en 2004. Fue diseñado desde cero para resolver el problema C10K: manejar más de 10.000 conexiones simultáneas de forma eficiente.</p>
+                    <p class="text-sunset-slate">A diferencia de servidores tradicionales como Apache que crean un hilo por cada conexión, Nginx utiliza una <strong>arquitectura asíncrona basada en eventos</strong>, lo que le permite atender miles de peticiones con un consumo mínimo de memoria.</p>
+                    <p class="text-sunset-slate mb-0">Hoy en día es usado por sitios como Netflix, Dropbox, WordPress.com y representa aproximadamente el 34% de los servidores web activos en internet.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-mision p-4 rounded-3 border-start border-4">
+                        <h5 class="fw-bold text-sunset-dark mb-3">Funciones principales de Nginx</h5>
+                        <ul class="mb-0 text-muted small ps-3">
+                            <li class="mb-1"><strong>Servidor web:</strong> Sirve archivos estáticos (HTML, CSS, JS, imágenes) directamente al navegador del usuario.</li>
+                            <li class="mb-1"><strong>Proxy inverso:</strong> Recibe peticiones del cliente y las redirige a servidores backend (como Node.js, Django o FastAPI).</li>
+                            <li class="mb-1"><strong>Balanceador de carga:</strong> Distribuye el tráfico entre múltiples servidores para evitar sobrecargas.</li>
+                            <li><strong>Caché:</strong> Almacena respuestas frecuentes para entregarlas más rápido sin consultar al backend.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nginx vs Apache -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Nginx vs Apache</h2>
+            <p class="text-center text-sunset-slate mb-4">Comparación entre los dos servidores web más utilizados.</p>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Característica</th>
+                            <th>Nginx</th>
+                            <th>Apache</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arquitectura</strong></td>
+                            <td>Asíncrona, basada en eventos</td>
+                            <td>Basada en procesos/hilos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rendimiento con archivos estáticos</strong></td>
+                            <td>Muy alto, consume poca memoria</td>
+                            <td>Bueno, pero consume más recursos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conexiones simultáneas</strong></td>
+                            <td>Maneja miles con bajo consumo</td>
+                            <td>Limitado por hilos disponibles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Configuración</strong></td>
+                            <td>Archivo centralizado (<code>nginx.conf</code>)</td>
+                            <td>Archivos distribuidos (<code>.htaccess</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proxy inverso</strong></td>
+                            <td>Nativo y eficiente</td>
+                            <td>Requiere módulos adicionales</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Arquitectura -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Arquitectura de Nginx</h2>
+            <p class="text-center text-sunset-slate mb-4">Cómo funciona internamente el servidor.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-sunset-dark mb-2"><i class="bi bi-cpu text-sunset-slate me-2"></i> Proceso Master</h5>
+                            <p class="text-muted small mb-0">Lee la configuración (<code>nginx.conf</code>), valida la sintaxis, abre los puertos de escucha y crea los procesos worker. No atiende peticiones directamente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-sunset-dark mb-2"><i class="bi bi-gear text-sunset-slate me-2"></i> Workers</h5>
+                            <p class="text-muted small mb-0">Procesos hijo que atienden las peticiones de los clientes. Cada worker maneja miles de conexiones simultáneas gracias al modelo de eventos (epoll/kqueue), sin crear un hilo por conexión.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="border-box p-4 bg-white h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold text-sunset-dark mb-2"><i class="bi bi-arrow-repeat text-sunset-slate me-2"></i> Event Loop</h5>
+                            <p class="text-muted small mb-0">Cada worker ejecuta un bucle de eventos que monitorea conexiones activas. Cuando una conexión tiene datos listos, el worker la procesa sin bloquear a las demás.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuración básica -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Configuración Básica de Nginx</h2>
+            <p class="text-center text-sunset-slate mb-4">Estructura del archivo <code>nginx.conf</code> y sus bloques principales.</p>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="border-box p-4 bg-white h-100">
+                        <h5 class="fw-bold text-sunset-dark mb-3">Bloques de configuración</h5>
+                        <ul class="text-muted small ps-3 mb-0">
+                            <li class="mb-2"><strong><code>events { }</code>:</strong> Define el modelo de conexiones y el número máximo de conexiones simultáneas por worker.</li>
+                            <li class="mb-2"><strong><code>http { }</code>:</strong> Contiene toda la configuración del servidor web: tipos MIME, logs, compresión y los bloques <code>server</code>.</li>
+                            <li class="mb-2"><strong><code>server { }</code>:</strong> Define un host virtual: en qué puerto escucha, qué dominio atiende y dónde están los archivos.</li>
+                            <li><strong><code>location { }</code>:</strong> Dentro de un <code>server</code>, define reglas para rutas específicas (ej: <code>/</code>, <code>/images/</code>, <code>/api/</code>).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="border-box p-4 bg-white h-100">
+                        <h5 class="fw-bold text-sunset-dark mb-3">Ejemplo: servir archivos estáticos</h5>
+                        <div class="p-3 rounded bg-light border border-sunset-light">
+                            <code>
+                                server {<br>
+                                &nbsp;&nbsp;listen 80;<br>
+                                &nbsp;&nbsp;server_name localhost;<br><br>
+                                &nbsp;&nbsp;location / {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;root /usr/share/nginx/html;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;index index.html;<br>
+                                &nbsp;&nbsp;}<br>
+                                }
+                            </code>
+                        </div>
+                        <p class="text-muted small mt-3 mb-0">
+                            <i class="bi bi-info-circle text-sunset-dark me-1"></i>
+                            Esta es la configuración que usamos en nuestro proyecto con Docker: Nginx escucha en el puerto 80 y sirve los archivos HTML desde la carpeta del contenedor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nginx con Docker -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Nginx con Docker en Nuestro Proyecto</h2>
+            <p class="text-center text-sunset-slate mb-4">Cómo usamos Nginx dentro de un contenedor para servir nuestro sitio.</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="border-box p-4 bg-white h-100">
+                        <h5 class="fw-bold text-sunset-dark mb-3">Dockerfile del proyecto</h5>
+                        <div class="p-3 rounded bg-light border border-sunset-light">
+                            <code>
+                                FROM nginx:alpine<br><br>
+                                COPY . /usr/share/nginx/html<br><br>
+                                EXPOSE 80
+                            </code>
+                        </div>
+                        <p class="text-muted small mt-3 mb-0">
+                            <i class="bi bi-info-circle text-sunset-dark me-1"></i>
+                            <strong>FROM</strong> usa la imagen oficial de Nginx basada en Alpine Linux (ligera). <strong>COPY</strong> copia nuestros archivos HTML/CSS al directorio que Nginx sirve. <strong>EXPOSE</strong> indica que el contenedor usa el puerto 80.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="border-box p-4 bg-white h-100">
+                        <h5 class="fw-bold text-sunset-dark mb-3">Comandos para ejecutar</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="p-3 rounded-3 shadow-sm mb-3 border-start border-4" style="border-color: #c85a32 !important; background: #fdf8f5;">
+                                <span class="fw-bold d-block mb-1 small text-sunset-dark">1. Construir la imagen</span>
+                                <code class="small">docker build -t sitio-gadc .</code>
+                            </li>
+                            <li class="p-3 rounded-3 shadow-sm mb-3 border-start border-4" style="border-color: #c85a32 !important; background: #fdf8f5;">
+                                <span class="fw-bold d-block mb-1 small text-sunset-dark">2. Ejecutar el contenedor</span>
+                                <code class="small">docker run -d -p 8080:80 sitio-gadc</code>
+                            </li>
+                            <li class="p-3 rounded-3 shadow-sm border-start border-4" style="border-color: #c85a32 !important; background: #fdf8f5;">
+                                <span class="fw-bold d-block mb-1 small text-sunset-dark">3. Ver el sitio</span>
+                                <code class="small">Abrir http://localhost:8080 en el navegador</code>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directivas importantes -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Directivas Importantes de Nginx</h2>
+            <p class="text-center text-sunset-slate mb-4">Las instrucciones más utilizadas en la configuración.</p>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Directiva</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>listen</code></td>
+                            <td>Puerto en el que Nginx escucha las peticiones.</td>
+                            <td><code>listen 80;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>server_name</code></td>
+                            <td>Dominio o nombre del host virtual.</td>
+                            <td><code>server_name localhost;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>root</code></td>
+                            <td>Directorio raíz donde están los archivos del sitio.</td>
+                            <td><code>root /usr/share/nginx/html;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>index</code></td>
+                            <td>Archivo por defecto cuando se accede a una ruta.</td>
+                            <td><code>index index.html;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>location</code></td>
+                            <td>Define reglas para rutas específicas del sitio.</td>
+                            <td><code>location /images/ { ... }</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>proxy_pass</code></td>
+                            <td>Redirige peticiones a otro servidor (proxy inverso).</td>
+                            <td><code>proxy_pass http://backend:3000;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>error_page</code></td>
+                            <td>Define páginas personalizadas para errores HTTP.</td>
+                            <td><code>error_page 404 /404.html;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>gzip</code></td>
+                            <td>Activa la compresión de respuestas para mayor velocidad.</td>
+                            <td><code>gzip on;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Flujo de una petición -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Flujo de una Petición HTTP</h2>
+            <p class="text-center text-sunset-slate mb-4">Qué sucede cuando un usuario visita nuestro sitio en localhost:8080.</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="border-box p-4 bg-white h-100 text-center">
+                        <i class="bi bi-globe text-sunset-dark" style="font-size: 2rem;"></i>
+                        <h5 class="fw-bold text-sunset-dark mt-3 mb-2">1. Navegador</h5>
+                        <p class="text-muted small mb-0">El usuario escribe <code>localhost:8080</code> en su navegador y envía una petición HTTP GET.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border-box p-4 bg-white h-100 text-center">
+                        <i class="bi bi-box text-sunset-dark" style="font-size: 2rem;"></i>
+                        <h5 class="fw-bold text-sunset-dark mt-3 mb-2">2. Docker</h5>
+                        <p class="text-muted small mb-0">Docker recibe la petición en el puerto 8080 y la redirige al puerto 80 interno del contenedor.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border-box p-4 bg-white h-100 text-center">
+                        <i class="bi bi-hdd-rack text-sunset-dark" style="font-size: 2rem;"></i>
+                        <h5 class="fw-bold text-sunset-dark mt-3 mb-2">3. Nginx</h5>
+                        <p class="text-muted small mb-0">Nginx recibe la petición, busca el archivo solicitado en <code>/usr/share/nginx/html</code> y lo prepara para enviar.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="border-box p-4 bg-white h-100 text-center">
+                        <i class="bi bi-file-earmark-code text-sunset-dark" style="font-size: 2rem;"></i>
+                        <h5 class="fw-bold text-sunset-dark mt-3 mb-2">4. Respuesta</h5>
+                        <p class="text-muted small mb-0">Nginx envía el archivo HTML/CSS/JS de vuelta al navegador, que lo renderiza como la página web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen -->
+        <section class="seccion-contenedor p-4 p-md-5 bg-white mb-5">
+            <h2 class="text-center fw-bold text-sunset-dark mb-2 display-6">Resumen</h2>
+            <p class="text-center text-sunset-slate mb-4">Conceptos clave de Nginx aplicados en el proyecto GADC.</p>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Descripción</th>
+                            <th>Uso en el Proyecto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Servidor web</strong></td>
+                            <td>Sirve archivos estáticos al navegador.</td>
+                            <td>Nginx entrega nuestros HTML, CSS e imágenes al usuario.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>nginx:alpine</strong></td>
+                            <td>Imagen Docker oficial ligera de Nginx.</td>
+                            <td>Base de nuestro Dockerfile para el contenedor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Puerto 80</strong></td>
+                            <td>Puerto estándar HTTP dentro del contenedor.</td>
+                            <td>Mapeado a 8080 en el host con <code>-p 8080:80</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>root</strong></td>
+                            <td>Directorio raíz de los archivos del sitio.</td>
+                            <td><code>/usr/share/nginx/html</code> contiene nuestro proyecto.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>index</strong></td>
+                            <td>Archivo por defecto al acceder a una ruta.</td>
+                            <td>Nginx sirve <code>index.html</code> al visitar la raíz.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proxy inverso</strong></td>
+                            <td>Reenvía peticiones a servidores backend.</td>
+                            <td>No usado en este lab, pero es una capacidad clave de Nginx.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-custom text-light py-4 mt-5 text-center">
+        <div class="container">
+            <p class="mb-1 fw-bold">Grupo GADC | Aplicaciones y Desarrollo Web</p>
+            <p class="mb-2 text-light-sunset small">Laboratorio 01</p>
+            <a href="https://github.com/patrisio777/EQUIPO-DE-TRABAJO" target="_blank" class="text-light text-decoration-underline">
+                <i class="bi bi-github me-1"></i> Ver en GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
